@@ -12,10 +12,4 @@ public class DemoApplication {
 
 }
 
-@RestController
-public class DemoController{
-    @GetMapping("/hello")
-    public String hello() {
-        return "Hello Render.com";
-    }
-}
+
