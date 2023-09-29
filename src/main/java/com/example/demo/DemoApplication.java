@@ -16,6 +16,6 @@ public class DemoApplication {
 public class DemoController{
     @GetMapping("/hello")
     publoc function hello() : String {
-        return "Hello Render.com"
+        return "Hello Render.comgi"
     }
 }
