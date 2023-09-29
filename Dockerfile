@@ -1,7 +1,7 @@
 # First stage: complete build environment
-FROM ubuntu:latest AS build
-RUN apt-get update
-RUN apt-get install openjdk-17-jdk -y
+FROM maven:3.8.2-jdk-17 AS build
+#RUN apt-get update
+#RUN apt-get install openjdk-17-jdk -y
 
 # pom.xml and source code
 COPY . .
