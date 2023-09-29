@@ -1,5 +1,5 @@
 # First stage: complete build environment
-FROM maven:3.8.2-jdk-17 AS build
+FROM maven:3.8.3-openjdk-17 AS build
 #RUN apt-get update
 #RUN apt-get install openjdk-17-jdk -y
 
@@ -7,7 +7,7 @@ FROM maven:3.8.2-jdk-17 AS build
 COPY . .
 
 # package jar
-RUN mvn clean package -DskipTests
+RUN mvn clean install
 
 # Second stage: runtime environment
 FROM openjdk:17-jdk-slim
